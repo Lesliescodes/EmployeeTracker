@@ -10,8 +10,18 @@ class DB {
     
     //create query fucntions to call on the front end
 
+    //employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
+
     findAllEmployees(){
-        return this.connection.promise().query('')
+        return this.connection.promise().query('SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name, role.salary, concat(manager.first_name, " ", manager.last_name) AS manager FROM employee JOIN role ON employee.role_id = role.id JOIN department ON department.id = role.department_id JOIN employee manager ON employee.manager_id = manager.id;')
+    }
+    //role id, title, department name, salary
+    findAllRoles(){
+        return this.connection.promise().query('SELECT role.id, role.title, role.salary, department.name FROM role JOIN department ON role.department_id = department.id;')
+    }
+
+    createEmployee(employee){
+        return this.connection.promise().query('INSERT INTO employee SET ?', employee);
     }
 }
 

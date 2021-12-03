@@ -16,6 +16,7 @@ A SQL terminal based application for work spaces. Employee Tracker creates a pro
 Employee Tracker requires [Node.js](https://nodejs.org/) v10+ to run.
 
 MySQL2
+
 ```sh
 npm install --save mysql2
 ```
@@ -26,7 +27,8 @@ Inquirer package
 npm install inquirer
 ```
 
-Console.table package 
+Console.table package
+
 ```sh
 npm install console.table --save
 ```

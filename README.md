@@ -32,4 +32,5 @@ Console.table package
 ```sh
 npm install console.table --save
 ```
-
+## Screenshot
+![employees](https://user-images.githubusercontent.com/84750526/144671162-0d66d7df-495a-4315-9eb6-037bd5314cbc.JPG)
